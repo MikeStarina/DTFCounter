@@ -1,0 +1,9 @@
+@import url(../blocks/page/page.css);
+@import url(../blocks/content/content.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__fieldset/form__fieldset.css);
+@import url(../blocks/calculations/__result/calculations__result.css);
+@import url(../blocks/calculations/calculations.css);
+@import url(../blocks/error/error.css);
+@import url(../blocks/parameters/parameters.css);
+@import url(../blocks/form/__input/form__input.css);

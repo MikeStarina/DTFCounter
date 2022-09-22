@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTF COUNTER</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body class="page">
+    <main class="content">
+        <h1 class="content__heading">DTF COUNTER</h1>
+        <p class="content__description">Введите ширину, высоту принта, а также количество</p>
+        <form class="form">
+            <fieldset class="form__fieldset">
+                <label class="form__input-label" for="width">Ширина (см)</label>
+                <input type="text" class="form__input" name="width" id="width">
+                <label class="form__input-label" for="height">Высота (см)</label>
+                <input type="text" class="form__input" name="height" id="height">
+                <label class="form__input-label" for="qty">Количество (шт)</label>
+                <input type="text" class="form__input" name="qty" id="qty">
+            </fieldset>
+            <button type="submit" class="form__submit-button">GO!</button>
+        </form>
+
+        <div class="calculations">
+            <p class="parameters" id="parameters"></p>
+            <p class="error" id="error"></p>
+            <h2 class="calculations__result" id="calculations__result">м.</h2>
+        </div>
+    </main>
+    <script src="./index.js"></script>   
+</body>
+</html>
