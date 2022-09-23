@@ -6,15 +6,3 @@
     text-align: center;
 }
 
-.calculations__result::after {
-    
-    content: ' /';
-   
-}
-
-
-@media (max-width: 1000px) {
-    .calculations__result::after {
-        content: none;
-    }
-}
