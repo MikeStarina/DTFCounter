@@ -8,3 +8,7 @@
     box-sizing: border-box;
     background-color: transparent;
 }
+
+.form__input:focus {
+    outline: 1px solid black;
+}
