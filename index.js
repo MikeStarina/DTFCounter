@@ -12,6 +12,8 @@ const printPriceField = document.querySelector('#printPrice');
 const totalPriceField = document.querySelector('#totalPrice');
 
 const dtfWidth = 50;
+const screenWidth = window.screen.width;
+console.log(screenWidth);
 
 
 
@@ -108,12 +110,39 @@ form.addEventListener('submit', (e) => {
         } else {
             params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
             error.textContent = 'принт больше области печати';
-            result.textContent = 'ERROR';
+                filmTotalField.textContent = '';
+                filmPriceField.textContent = '';
+                printPriceField.textContent = '';
+                totalPriceField.textContent = '';
         }
     } else {
         error.textContent = 'параметры не указаны';
-        result.textContent = 'ERROR'; 
+        
+
+                filmTotalField.textContent = '';
+                filmPriceField.textContent = '';
+                printPriceField.textContent = '';
+                totalPriceField.textContent = '';
+
+    }
+
+
+
+
+    if (screenWidth < 700) {
+        form.reset();
+        widthInput.focus();
     }
 
     
+})
+
+
+form.addEventListener('keydown', (e) => {
+
+    //console.log('test');
+    if (e.key === 'Escape') {
+        form.reset();
+        widthInput.focus();
+    }
 })
