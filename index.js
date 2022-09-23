@@ -13,7 +13,7 @@ const totalPriceField = document.querySelector('#totalPrice');
 
 const dtfWidth = 50;
 const screenWidth = window.screen.width;
-console.log(screenWidth);
+//console.log(screenWidth);
 
 
 
@@ -58,7 +58,7 @@ form.addEventListener('submit', (e) => {
                 const filmPrice = orderHeightInMeters * 1500;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
-                console.log(totalPrice);
+                //console.log(totalPrice);
 
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
                 const filmPrice = orderHeightInMeters * 2000;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
-                console.log(totalPrice);
+                //console.log(totalPrice);
 
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
@@ -101,7 +101,7 @@ form.addEventListener('submit', (e) => {
                 const filmPrice = orderHeightInMeters * 1500;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
-                console.log(totalPrice);
+                //console.log(totalPrice);
 
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
