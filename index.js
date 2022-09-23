@@ -51,6 +51,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `${printPrice}р. перенос /`;
                 totalPriceField.textContent = `${totalPrice}р. итого /`;
 
+                error.textContent = '';
+
             } else {
 
                 const filmPrice = orderHeightInMeters * 1500;
@@ -65,6 +67,8 @@ form.addEventListener('submit', (e) => {
                 filmPriceField.textContent = `${filmPrice}р. печать /`;
                 printPriceField.textContent = `${printPrice}р. перенос /`;
                 totalPriceField.textContent = `${totalPrice}р. итого /`;
+
+                error.textContent = '';
 
             }
 
@@ -89,6 +93,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `${printPrice}р. перенос /`;
                 totalPriceField.textContent = `${totalPrice}р. итого /`;
 
+                error.textContent = '';
+
 
             } else {
 
@@ -105,10 +111,13 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `${printPrice}р. перенос /`;
                 totalPriceField.textContent = `${totalPrice}р. итого /`;
 
+
+                error.textContent = '';
+
             }
 
         } else {
-            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            params.textContent = '';
             error.textContent = 'принт больше области печати';
                 filmTotalField.textContent = '';
                 filmPriceField.textContent = '';
@@ -117,6 +126,7 @@ form.addEventListener('submit', (e) => {
         }
     } else {
         error.textContent = 'параметры не указаны';
+        params.textContent = '';
         
 
                 filmTotalField.textContent = '';
@@ -131,7 +141,11 @@ form.addEventListener('submit', (e) => {
 
     if (screenWidth < 700) {
         form.reset();
-        widthInput.focus();
+        
+        widthInput.blur();
+        heightInput.blur();
+        qtyInput.blur();
+        submitButton.blur();
     }
 
     
