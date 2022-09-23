@@ -44,10 +44,10 @@ form.addEventListener('submit', (e) => {
                
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
-                filmTotalField.textContent = `${orderHeightInMeters}м.`;
-                filmPriceField.textContent = `${filmPrice}р. печать`;
-                printPriceField.textContent = `${printPrice}р. перенос`;
-                totalPriceField.textContent = `${totalPrice}р. итого`;
+                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
+                filmPriceField.textContent = `${filmPrice}р. печать /`;
+                printPriceField.textContent = `${printPrice}р. перенос /`;
+                totalPriceField.textContent = `${totalPrice}р. итого /`;
 
             } else {
 
@@ -59,10 +59,10 @@ form.addEventListener('submit', (e) => {
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
-                filmTotalField.textContent = `${orderHeightInMeters}м.`;
-                filmPriceField.textContent = `${filmPrice}р. печать`;
-                printPriceField.textContent = `${printPrice}р. перенос`;
-                totalPriceField.textContent = `${totalPrice}р. итого`;
+                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
+                filmPriceField.textContent = `${filmPrice}р. печать /`;
+                printPriceField.textContent = `${printPrice}р. перенос /`;
+                totalPriceField.textContent = `${totalPrice}р. итого /`;
 
             }
 
@@ -82,10 +82,10 @@ form.addEventListener('submit', (e) => {
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
-                filmTotalField.textContent = `${orderHeightInMeters}м.`;
-                filmPriceField.textContent = `${filmPrice}р. печать`;
-                printPriceField.textContent = `${printPrice}р. перенос`;
-                totalPriceField.textContent = `${totalPrice}р. итого`;
+                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
+                filmPriceField.textContent = `${filmPrice}р. печать /`;
+                printPriceField.textContent = `${printPrice}р. перенос /`;
+                totalPriceField.textContent = `${totalPrice}р. итого /`;
 
 
             } else {
@@ -98,10 +98,10 @@ form.addEventListener('submit', (e) => {
                 
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
-                filmTotalField.textContent = `${orderHeightInMeters}м.`;
-                filmPriceField.textContent = `${filmPrice}р. печать`;
-                printPriceField.textContent = `${printPrice}р. перенос`;
-                totalPriceField.textContent = `${totalPrice}р. итого`;
+                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
+                filmPriceField.textContent = `${filmPrice}р. печать /`;
+                printPriceField.textContent = `${printPrice}р. перенос /`;
+                totalPriceField.textContent = `${totalPrice}р. итого /`;
 
             }
 
