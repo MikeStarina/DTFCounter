@@ -15,11 +15,11 @@
         <form class="form">
             <fieldset class="form__fieldset">
                 <label class="form__input-label" for="width">Ширина (см)</label>
-                <input type="text" class="form__input" name="width" id="width">
+                <input type="text" class="form__input" name="width" id="width" autofocus autocomplete="off">
                 <label class="form__input-label" for="height">Высота (см)</label>
-                <input type="text" class="form__input" name="height" id="height">
+                <input type="text" class="form__input" name="height" id="height" autocomplete="off">
                 <label class="form__input-label" for="qty">Количество (шт)</label>
-                <input type="text" class="form__input" name="qty" id="qty">
+                <input type="text" class="form__input" name="qty" id="qty" autocomplete="off">
             </fieldset>
             <button type="submit" class="form__submit-button">GO!</button>
         </form>
@@ -27,7 +27,12 @@
         <div class="calculations">
             <p class="parameters" id="parameters"></p>
             <p class="error" id="error"></p>
-            <h2 class="calculations__result" id="calculations__result">м.</h2>
+            <div class="calculations__wrapper">
+                <h2 class="calculations__result" id="filmTotal"></h2>
+                <h2 class="calculations__result" id="filmPrice"></h2>
+                <h2 class="calculations__result" id="printPrice"></h2>
+                <h2 class="calculations__result" id="totalPrice"></h2>
+            </div>
         </div>
     </main>
     <script src="./index.js"></script>   

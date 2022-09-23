@@ -1,7 +1,20 @@
 .calculations__result {
-    margin: 20px 0 0 0;
+    margin: 10px;
     padding: 0;
     font-size: 30px;
     line-height: 30px;
     text-align: center;
+}
+
+.calculations__result::after {
+    
+    content: ' /';
+   
+}
+
+
+@media (max-width: 1000px) {
+    .calculations__result::after {
+        content: none;
+    }
 }
