@@ -19,8 +19,7 @@ form.addEventListener('submit', (e) => {
     const height = parseInt(heightInput.value) + 1;
     const qty = parseInt(qtyInput.value);
 
-    console.log(typeof width);
-    console.log(width);
+    
 
     if (width && height && qty) {
 
@@ -30,13 +29,25 @@ form.addEventListener('submit', (e) => {
             const orderHeight = Math.ceil(qty / printToWidth) * height;
             const orderHeightInMeters = Math.ceil(orderHeight / 100);
 
+            
             if (orderHeightInMeters <= 10) {
 
-                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 2000}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                const filmPrice = orderHeightInMeters * 2000;
+                const printPrice = qty * 150;
+                const totalPrice = filmPrice + printPrice;
+                console.log(totalPrice);
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${filmPrice}р. печать / ${printPrice}р. перенос / ${totalPrice}р итого`;
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
             } else {
-                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 1500}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+
+                const filmPrice = orderHeightInMeters * 1500;
+                const printPrice = qty * 150;
+                const totalPrice = filmPrice + printPrice;
+                console.log(totalPrice);
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${filmPrice}р. печать / ${printPrice}р. перенос / ${totalPrice}р итого`;;
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
             }
 
@@ -48,11 +59,22 @@ form.addEventListener('submit', (e) => {
 
             if (orderHeightInMeters <= 10) {
 
-                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 2000}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                const filmPrice = orderHeightInMeters * 2000;
+                const printPrice = qty * 150;
+                const totalPrice = filmPrice + printPrice;
+                console.log(totalPrice);
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${filmPrice}р. печать / ${printPrice}р. перенос / ${totalPrice}р итого`;
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
             } else {
-                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 1500}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+
+                const filmPrice = orderHeightInMeters * 1500;
+                const printPrice = qty * 150;
+                const totalPrice = filmPrice + printPrice;
+                console.log(totalPrice);
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${filmPrice}р. печать / ${printPrice}р. перенос / ${totalPrice}р итого`;;
                 params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
             }
 
