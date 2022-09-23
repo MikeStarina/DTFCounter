@@ -9,13 +9,11 @@
 }
 
 .form__submit-button:hover {
-    background-color: black;
-    color: rgb(0, 255, 0);
+    background-color: rgba(0, 0, 0, .1);
     cursor: pointer;
 }
 
 .form__submit-button:focus {
-    background-color: black;
-    color: rgb(0, 255, 0);
+    background-color: rgba(0, 0, 0, .1);
     cursor: pointer;
 }

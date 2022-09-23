@@ -10,5 +10,6 @@
 }
 
 .form__input:focus {
-    outline: 1px solid black;
+    outline: none;
+    background-color: rgba(0, 0, 0, .1);
 }
