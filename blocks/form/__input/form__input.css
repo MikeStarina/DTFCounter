@@ -13,3 +13,9 @@
     outline: none;
     background-color: rgba(0, 0, 0, .1);
 }
+
+@media (max-width: 400px) {
+    .form__input {
+        width: 300px;
+    }
+}
