@@ -19,28 +19,37 @@ form.addEventListener('submit', (e) => {
     const height = parseInt(heightInput.value) + 1;
     const qty = parseInt(qtyInput.value);
 
-    if (width <= dtfWidth) {
-        const printToWidth = Math.floor(dtfWidth / width);
+    console.log(typeof width);
+    console.log(width);
 
-        const orderHeight = Math.ceil(qty / printToWidth) * height;
-        const orderHeightInMeters = Math.ceil(orderHeight / 100);
+    if (width && height && qty) {
 
-        result.textContent = `${orderHeightInMeters} м.`;
-        params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+        if (width <= dtfWidth) {
+            const printToWidth = Math.floor(dtfWidth / width);
 
-    } else if (width > dtfWidth && height < dtfWidth) {
-        const printToWidth = Math.floor(dtfWidth / height);
+            const orderHeight = Math.ceil(qty / printToWidth) * height;
+            const orderHeightInMeters = Math.ceil(orderHeight / 100);
 
-        const orderHeight = Math.ceil(qty / printToWidth) * width;
-        const orderHeightInMeters = Math.ceil(orderHeight / 100);
+            result.textContent = `${orderHeightInMeters} м.`;
+            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
 
-        result.textContent = `${orderHeightInMeters} м.`;
-        params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+        } else if (width > dtfWidth && height < dtfWidth) {
+            const printToWidth = Math.floor(dtfWidth / height);
 
+            const orderHeight = Math.ceil(qty / printToWidth) * width;
+            const orderHeightInMeters = Math.ceil(orderHeight / 100);
+
+            result.textContent = `${orderHeightInMeters} м.`;
+            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+
+        } else {
+            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            error.textContent = 'принт больше области печати';
+            result.textContent = 'ERROR';
+        }
     } else {
-        params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
-        error.textContent = 'принт больше области печати';
-        result.textContent = 'ERROR';
+        error.textContent = 'параметры не указаны';
+        result.textContent = 'ERROR'; 
     }
 
     form.reset();
