@@ -3,13 +3,16 @@ const heightInput = document.querySelector('#height');
 const qtyInput = document.querySelector('#qty');
 const submitButton = document.querySelector('form__submit-button');
 const form = document.querySelector('form');
-const params = document.querySelector('#parameters');
+
 const error = document.querySelector('#error');
 
 const filmTotalField = document.querySelector('#filmTotal');
 const filmPriceField = document.querySelector('#filmPrice');
 const printPriceField = document.querySelector('#printPrice');
 const totalPriceField = document.querySelector('#totalPrice');
+const widthField = document.querySelector('#widthOutput');
+const heightField = document.querySelector('#heightOutput');
+const qtyField = document.querySelector('#qtyOutput');
 
 const dtfWidth = 50;
 const screenWidth = window.screen.width;
@@ -24,6 +27,9 @@ form.addEventListener('submit', (e) => {
     const width = parseInt(widthInput.value) + 1;
     const height = parseInt(heightInput.value) + 1;
     const qty = parseInt(qtyInput.value);
+
+    
+
 
     
 
@@ -43,13 +49,16 @@ form.addEventListener('submit', (e) => {
                 const totalPrice = filmPrice + printPrice;
                 //console.log(totalPrice);
 
-               
-                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+       
 
-                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
-                filmPriceField.textContent = `${filmPrice}р. печать /`;
-                printPriceField.textContent = `${printPrice}р. перенос /`;
-                totalPriceField.textContent = `${totalPrice}р. итого /`;
+                filmTotalField.textContent = `${orderHeightInMeters} м.`;
+                filmPriceField.textContent = `Стоимость печати: ${filmPrice} р.`;
+                printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
+                totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
+
+                widthField.textContent = `Ширина: ${width - 1} см.`;
+                heightField.textContent = `Высота: ${height - 1} см.`;
+                qtyField.textContent = `Количество: ${qty} см.`;
 
                 error.textContent = '';
 
@@ -61,12 +70,16 @@ form.addEventListener('submit', (e) => {
                 //console.log(totalPrice);
 
                 
-                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+              
 
-                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
-                filmPriceField.textContent = `${filmPrice}р. печать /`;
-                printPriceField.textContent = `${printPrice}р. перенос /`;
-                totalPriceField.textContent = `${totalPrice}р. итого /`;
+                filmTotalField.textContent = `${orderHeightInMeters} м.`;
+                filmPriceField.textContent = `Стоимость печати: ${filmPrice} р.`;
+                printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
+                totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
+
+                widthField.textContent = `Ширина: ${width - 1} см.`;
+                heightField.textContent = `Высота: ${height - 1} см.`;
+                qtyField.textContent = `Количество: ${qty} см.`;
 
                 error.textContent = '';
 
@@ -86,12 +99,15 @@ form.addEventListener('submit', (e) => {
                 //console.log(totalPrice);
 
                 
-                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+                
+                filmTotalField.textContent = `${orderHeightInMeters} м.`;
+                filmPriceField.textContent = `Стоимость печати: ${filmPrice} р.`;
+                printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
+                totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
 
-                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
-                filmPriceField.textContent = `${filmPrice}р. печать /`;
-                printPriceField.textContent = `${printPrice}р. перенос /`;
-                totalPriceField.textContent = `${totalPrice}р. итого /`;
+                widthField.textContent = `Ширина: ${width - 1} см.`;
+                heightField.textContent = `Высота: ${height - 1} см.`;
+                qtyField.textContent = `Количество: ${qty} см.`;
 
                 error.textContent = '';
 
@@ -104,12 +120,16 @@ form.addEventListener('submit', (e) => {
                 //console.log(totalPrice);
 
                 
-                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+              
 
-                filmTotalField.textContent = `${orderHeightInMeters}м. /`;
-                filmPriceField.textContent = `${filmPrice}р. печать /`;
-                printPriceField.textContent = `${printPrice}р. перенос /`;
-                totalPriceField.textContent = `${totalPrice}р. итого /`;
+                filmTotalField.textContent = `${orderHeightInMeters} м.`;
+                filmPriceField.textContent = `Стоимость печати: ${filmPrice} р.`;
+                printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
+                totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
+
+                widthField.textContent = `Ширина: ${width - 1} см.`;
+                heightField.textContent = `Высота: ${height - 1} см.`;
+                qtyField.textContent = `Количество: ${qty} см.`;
 
 
                 error.textContent = '';
@@ -117,22 +137,30 @@ form.addEventListener('submit', (e) => {
             }
 
         } else {
-            params.textContent = '';
+          
             error.textContent = 'принт больше области печати';
-                filmTotalField.textContent = '';
-                filmPriceField.textContent = '';
-                printPriceField.textContent = '';
-                totalPriceField.textContent = '';
+            filmTotalField.textContent = `м.`;
+            filmPriceField.textContent = `Стоимость печати:`;
+            printPriceField.textContent = `Стоимость переноса:`;
+            totalPriceField.textContent = `Итоговая стоимость:`;
+
+                widthField.textContent = `ширина:`;
+                heightField.textContent = `высота:`;
+                qtyField.textContent = `количество:`;
         }
     } else {
         error.textContent = 'параметры не указаны';
-        params.textContent = '';
+     
         
 
-                filmTotalField.textContent = '';
-                filmPriceField.textContent = '';
-                printPriceField.textContent = '';
-                totalPriceField.textContent = '';
+                filmTotalField.textContent = 'м.';
+                filmPriceField.textContent = `Стоимость печати:`;
+                printPriceField.textContent = `Стоимость переноса:`;
+                totalPriceField.textContent = `Итоговая стоимость:`;
+
+                widthField.textContent = `ширина:`;
+                heightField.textContent = `высота:`;
+                qtyField.textContent = `количество:`;
 
     }
 
@@ -146,6 +174,8 @@ form.addEventListener('submit', (e) => {
         heightInput.blur();
         qtyInput.blur();
         submitButton.blur();
+
+        filmTotalField.scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
     }
 
     
@@ -158,5 +188,15 @@ form.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         form.reset();
         widthInput.focus();
+
+                filmTotalField.textContent = 'м.';
+                filmPriceField.textContent = `Стоимость печати:`;
+                printPriceField.textContent = `Стоимость переноса:`;
+                totalPriceField.textContent = `Итоговая стоимость:`;
+                error.textContent = '';
+               
+                widthField.textContent = `ширина:`;
+                heightField.textContent = `высота:`;
+                qtyField.textContent = `количество:`;
     }
 })
