@@ -30,8 +30,15 @@ form.addEventListener('submit', (e) => {
             const orderHeight = Math.ceil(qty / printToWidth) * height;
             const orderHeightInMeters = Math.ceil(orderHeight / 100);
 
-            result.textContent = `${orderHeightInMeters} м.`;
-            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            if (orderHeightInMeters <= 10) {
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 2000}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+
+            } else {
+                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 1500}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            }
 
         } else if (width > dtfWidth && height < dtfWidth) {
             const printToWidth = Math.floor(dtfWidth / height);
@@ -39,8 +46,15 @@ form.addEventListener('submit', (e) => {
             const orderHeight = Math.ceil(qty / printToWidth) * width;
             const orderHeightInMeters = Math.ceil(orderHeight / 100);
 
-            result.textContent = `${orderHeightInMeters} м.`;
-            params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            if (orderHeightInMeters <= 10) {
+
+                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 2000}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+
+            } else {
+                result.textContent = `>> ${orderHeightInMeters} м. / ${orderHeightInMeters * 1500}р. печать / ${qty * 150}р. перенос / ${orderHeightInMeters * 1500 + qty * 150}р итого`;
+                params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
+            }
 
         } else {
             params.textContent = `ш: ${width - 1}см. в: ${height - 1}см. кол-во: ${qty} шт.`;
@@ -52,5 +66,5 @@ form.addEventListener('submit', (e) => {
         result.textContent = 'ERROR'; 
     }
 
-    form.reset();
+    
 })
