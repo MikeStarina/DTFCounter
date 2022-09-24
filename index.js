@@ -58,7 +58,7 @@ form.addEventListener('submit', (e) => {
 
                 widthField.textContent = `Ширина: ${width - 1} см.`;
                 heightField.textContent = `Высота: ${height - 1} см.`;
-                qtyField.textContent = `Количество: ${qty} см.`;
+                qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
 
@@ -79,7 +79,7 @@ form.addEventListener('submit', (e) => {
 
                 widthField.textContent = `Ширина: ${width - 1} см.`;
                 heightField.textContent = `Высота: ${height - 1} см.`;
-                qtyField.textContent = `Количество: ${qty} см.`;
+                qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
 
@@ -107,7 +107,7 @@ form.addEventListener('submit', (e) => {
 
                 widthField.textContent = `Ширина: ${width - 1} см.`;
                 heightField.textContent = `Высота: ${height - 1} см.`;
-                qtyField.textContent = `Количество: ${qty} см.`;
+                qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
 
@@ -129,7 +129,7 @@ form.addEventListener('submit', (e) => {
 
                 widthField.textContent = `Ширина: ${width - 1} см.`;
                 heightField.textContent = `Высота: ${height - 1} см.`;
-                qtyField.textContent = `Количество: ${qty} см.`;
+                qtyField.textContent = `Количество: ${qty} шт.`;
 
 
                 error.textContent = '';
