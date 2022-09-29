@@ -44,7 +44,7 @@ form.addEventListener('submit', (e) => {
             
             if (orderHeightInMeters <= 10) {
 
-                const filmPrice = orderHeightInMeters * 2000;
+                const filmPrice = Math.ceil(orderHeightInMeters) * 2000;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
                 //console.log(totalPrice);
@@ -64,7 +64,7 @@ form.addEventListener('submit', (e) => {
 
             } else {
 
-                const filmPrice = orderHeightInMeters * 1500;
+                const filmPrice = Math.ceil(orderHeightInMeters) * 1500;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
                 //console.log(totalPrice);
@@ -93,7 +93,7 @@ form.addEventListener('submit', (e) => {
 
             if (orderHeightInMeters <= 10) {
 
-                const filmPrice = orderHeightInMeters * 2000;
+                const filmPrice = Math.ceil(orderHeightInMeters) * 2000;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
                 //console.log(totalPrice);
@@ -114,7 +114,7 @@ form.addEventListener('submit', (e) => {
 
             } else {
 
-                const filmPrice = orderHeightInMeters * 1500;
+                const filmPrice = Math.ceil(orderHeightInMeters) * 1500;
                 const printPrice = qty * 150;
                 const totalPrice = filmPrice + printPrice;
                 //console.log(totalPrice);
