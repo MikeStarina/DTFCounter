@@ -35,11 +35,11 @@ form.addEventListener('submit', (e) => {
 
     if (width && height && qty) {
 
-        if (width <= dtfWidth) {
+        if (width <= dtfWidth && width <= height) {
             const printToWidth = Math.floor(dtfWidth / width);
 
             const orderHeight = Math.ceil(qty / printToWidth) * height;
-            const orderHeightInMeters = Math.ceil(orderHeight / 100);
+            const orderHeightInMeters = orderHeight / 100;
 
             
             if (orderHeightInMeters <= 10) {
@@ -85,11 +85,11 @@ form.addEventListener('submit', (e) => {
 
             }
 
-        } else if (width > dtfWidth && height < dtfWidth) {
+        } else if (width <= dtfWidth && width > height || width > dtfWidth && height <= dtfWidth) {
             const printToWidth = Math.floor(dtfWidth / height);
 
             const orderHeight = Math.ceil(qty / printToWidth) * width;
-            const orderHeightInMeters = Math.ceil(orderHeight / 100);
+            const orderHeightInMeters = orderHeight / 100;
 
             if (orderHeightInMeters <= 10) {
 
@@ -175,7 +175,7 @@ form.addEventListener('submit', (e) => {
         qtyInput.blur();
         submitButton.blur();
 
-        filmTotalField.scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+       
     }
 
     
@@ -184,7 +184,7 @@ form.addEventListener('submit', (e) => {
 
 form.addEventListener('keydown', (e) => {
 
-    //console.log('test');
+    console.log('test');
     if (e.key === 'Escape') {
         form.reset();
         widthInput.focus();
