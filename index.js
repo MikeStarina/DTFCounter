@@ -10,8 +10,8 @@ const filmTotalField = document.querySelector('#filmTotal');
 const filmPriceField = document.querySelector('#filmPrice');
 const printPriceField = document.querySelector('#printPrice');
 const totalPriceField = document.querySelector('#totalPrice');
-const widthField = document.querySelector('#widthOutput');
-const heightField = document.querySelector('#heightOutput');
+const sizeField = document.querySelector('#sizeOutput');
+const layoutField = document.querySelector('#layoutOutput');
 const qtyField = document.querySelector('#qtyOutput');
 
 const dtfWidth = 50;
@@ -56,8 +56,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
                 totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
 
-                widthField.textContent = `Ширина: ${width - 1} см.`;
-                heightField.textContent = `Высота: ${height - 1} см.`;
+                sizeField.textContent = `Размер: ШхВ ${width - 1} х ${height - 1} см.`;
+                layoutField.textContent = `Раскладка: по ширине`;
                 qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
@@ -77,8 +77,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
                 totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
 
-                widthField.textContent = `Ширина: ${width - 1} см.`;
-                heightField.textContent = `Высота: ${height - 1} см.`;
+                sizeField.textContent = `Размер: ШхВ ${width - 1} х ${height - 1} см.`;
+                layoutField.textContent = `Раскладка: по ширине`;
                 qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
@@ -105,8 +105,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
                 totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
 
-                widthField.textContent = `Ширина: ${width - 1} см.`;
-                heightField.textContent = `Высота: ${height - 1} см.`;
+                sizeField.textContent = `Размер: ШхВ ${width - 1} х ${height - 1} см.`;
+                layoutField.textContent = `Раскладка: по высоте`;
                 qtyField.textContent = `Количество: ${qty}  шт.`;
 
                 error.textContent = '';
@@ -127,8 +127,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `Стоимость переноса: ${printPrice} р.`;
                 totalPriceField.textContent = `Итоговая стоимость: ${totalPrice} р.`;
 
-                widthField.textContent = `Ширина: ${width - 1} см.`;
-                heightField.textContent = `Высота: ${height - 1} см.`;
+                sizeField.textContent = `Размер: ШхВ ${width - 1} х ${height - 1} см.`;
+                layoutField.textContent = `Раскладка: по высоте`;
                 qtyField.textContent = `Количество: ${qty} шт.`;
 
 
@@ -144,9 +144,9 @@ form.addEventListener('submit', (e) => {
             printPriceField.textContent = `Стоимость переноса:`;
             totalPriceField.textContent = `Итоговая стоимость:`;
 
-                widthField.textContent = `ширина:`;
-                heightField.textContent = `высота:`;
-                qtyField.textContent = `количество:`;
+                sizeField.textContent = `Размер:`;
+                layoutField.textContent = `Раскладка:`;
+                qtyField.textContent = `Количество:`;
         }
     } else {
         error.textContent = 'параметры не указаны';
@@ -158,8 +158,8 @@ form.addEventListener('submit', (e) => {
                 printPriceField.textContent = `Стоимость переноса:`;
                 totalPriceField.textContent = `Итоговая стоимость:`;
 
-                widthField.textContent = `ширина:`;
-                heightField.textContent = `высота:`;
+                sizeField.textContent = `Размер:`;
+                layoutField.textContent = `Раскладка:`;
                 qtyField.textContent = `количество:`;
 
     }
@@ -195,8 +195,8 @@ form.addEventListener('keydown', (e) => {
                 totalPriceField.textContent = `Итоговая стоимость:`;
                 error.textContent = '';
                
-                widthField.textContent = `ширина:`;
-                heightField.textContent = `высота:`;
-                qtyField.textContent = `количество:`;
+                sizeField.textContent = `Размер:`;
+                layoutField.textContent = `Раскладка:`;
+                qtyField.textContent = `Количество:`;
     }
 })
